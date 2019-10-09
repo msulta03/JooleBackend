@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootJwtAuthenticationApplication<SpringBootJwtAuthentication>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.grokonez.jwtauthentication.SpringBootJwtAuthenticationApplication",
+            "projectName": "SpringBootJwtAuthentication",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootJwtAuthenticationApplication<SpringBootJwtAuthentication>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.joole.jwtauthentication.SpringBootJwtAuthenticationApplication",
+            "projectName": "SpringBootJwtAuthentication",
+            "args": ""
+        }
+    ]
+}
