@@ -1,5 +1,7 @@
 package com.joole.jwtauthentication.controller;
 
+import javax.validation.Valid;
+
 import com.joole.jwtauthentication.model.Products;
 import com.joole.jwtauthentication.repository.ProductService;
 
@@ -16,12 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
+@RequestMapping("/api/auth")
 public class ProductServiceController {
    @Autowired
    ProductService productService;
 
    @RequestMapping(value = "/products")
-   public ResponseEntity<?> getProducts() {
+   public ResponseEntity<?> getProducts( ) {
       return new ResponseEntity<>(productService.getProductList(), HttpStatus.OK);
    }
 //    @RequestMapping(value = "/products/{id}", method = RequestMethod.PUT)

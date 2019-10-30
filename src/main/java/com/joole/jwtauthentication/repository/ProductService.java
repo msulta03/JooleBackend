@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.joole.jwtauthentication.model.Products;
 
+import org.springframework.stereotype.Service;
 
+@Service
 public interface ProductService {
 //    public abstract void createProduct(Products product);
 //    public abstract void updateProduct(String id, Products product);

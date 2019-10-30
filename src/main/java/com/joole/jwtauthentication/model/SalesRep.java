@@ -21,7 +21,7 @@ import org.hibernate.annotations.NaturalId;
 public class SalesRep {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @OneToMany(mappedBy = "SalesRep" ,cascade = CascadeType.ALL)
+    // @OneToMany(mappedBy = "SalesRep" ,cascade = CascadeType.ALL)
     private Long id;
 
     @NotBlank

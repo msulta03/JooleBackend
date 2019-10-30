@@ -18,9 +18,9 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-
+// , indexes = { @Index(name = "manufacturer_index", columnList = "manufacturer_id") }
 @Entity
-@Table(name = "Products")
+@Table(name = "Products" )
 public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -82,7 +82,7 @@ public class Products {
 
 
 
-    @Column(name = "series_information")
+    @Column(name = "series_information", length = 1000)
     private String seriesInfo;
 
 
@@ -97,15 +97,16 @@ public class Products {
 
 
 
-    @ManyToOne
-    @Column(name = "manufacturer_id")
-    private String manufacturerId;
+    // @ManyToOne
+    
+    @Column(name = "manufacturer_id", length  = 1000000)
+    private long manufacturerId;
 
 
 
-    @ManyToOne
+    // @ManyToOne
     @Column(name = "salesrep_id")
-    private String salesrepId;
+    private long salesrepId;
 
     @NotBlank
     @Size(min=3, max = 50)
@@ -125,19 +126,19 @@ public class Products {
         this.category = category;
     }
 
-    public String getSalesrepId() {
+    public long getSalesrepId() {
         return this.salesrepId;
     }
 
-    public void setSalesrepId(String salesrepId) {
+    public void setSalesrepId(Long salesrepId) {
         this.salesrepId = salesrepId;
     }
 
-    public String getManufacturerId() {
+    public long getManufacturerId() {
         return this.manufacturerId;
     }
 
-    public void setManufacturerId(String manufacturerId) {
+    public void setManufacturerId(long manufacturerId) {
         this.manufacturerId = manufacturerId;
     }
 

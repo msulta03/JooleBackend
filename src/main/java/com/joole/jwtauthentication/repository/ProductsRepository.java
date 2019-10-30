@@ -11,6 +11,6 @@ import com.joole.jwtauthentication.model.Products;
 @Repository
 public interface ProductsRepository extends JpaRepository<Products, Long> {
     
-    public Products findByProductsId(long Id);
+    public Products findById(long Id);
 
 }
